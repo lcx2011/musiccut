@@ -58,6 +58,7 @@ jobs:
           Copy-Item -Path (Join-Path $ffdir "bin\*") -Destination "." -Recurse -Force
 
       - name: Build (PyInstaller onedir)
+        shell: cmd
         run: |
           pyinstaller --noconfirm --windowed --onedir ^
             --name MusicCut ^
